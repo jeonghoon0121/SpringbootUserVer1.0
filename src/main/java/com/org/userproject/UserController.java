@@ -12,11 +12,6 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping("/register")
-    public ResponseEntity<String> register(@RequestBody UserDTO userdto) {
-        userService.registerUser(userdto);
-        return ResponseEntity.ok("✅ 회원가입 완료");
-    }
 
     @GetMapping("/{username}")
     public ResponseEntity<UserDTO> getUser(@PathVariable String username) {

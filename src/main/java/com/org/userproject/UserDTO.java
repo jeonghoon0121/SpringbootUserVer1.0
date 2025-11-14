@@ -1,18 +1,20 @@
 package com.org.userproject;
-
 import java.time.LocalDateTime;
 
+
 public class UserDTO {
-    private Long userId;
+    private int userId;
     private String username;
     private String password;
     private String email;
     private LocalDateTime createdAt;
 
+
+
     public UserDTO() {
     }
 
-    public UserDTO(Long userId, String username, String password, String email, LocalDateTime createdAt) {
+    public UserDTO(int userId, String username, String password, String email, LocalDateTime createdAt) {
         this.userId = userId;
         this.username = username;
         this.password = password;
@@ -20,11 +22,11 @@ public class UserDTO {
         this.createdAt = createdAt;
     }
 
-    public Long getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
@@ -58,16 +60,5 @@ public class UserDTO {
 
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
-    }
-
-    @Override
-    public String toString() {
-        return "UserDTO{" +
-                "userId=" + userId +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", email='" + email + '\'' +
-                ", createdAt=" + createdAt +
-                '}';
     }
 }

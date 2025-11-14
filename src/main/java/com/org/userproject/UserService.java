@@ -11,11 +11,6 @@ public class UserService {
         this.userMapper = userMapper;
     }
 
-    public void registerUser(UserDTO userDTO) {
-        // TODO: 비밀번호 암호화 처리 가능
-        userMapper.insertUser(userDTO);
-    }
-
     public UserDTO getUserByUsername(String username) {
         return userMapper.findByUsername(username);
     }
